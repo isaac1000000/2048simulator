@@ -10,7 +10,8 @@ public class LeftUpRightAllowDown extends TestCase{
 	// Cycles through left, up, right
 	@Override
 	public int makeDecision(Mover mover) {
-		if (repeats == 3){
+		if (repeats == 2){
+			System.out.println("I went down!");
 			return 1;
 		}
 		if (index > 2) {
@@ -40,7 +41,7 @@ public class LeftUpRightAllowDown extends TestCase{
 	}
 	
 	public static void main(String[] args) {
-		LeftUpRight test = new LeftUpRight();
+		LeftUpRightAllowDown test = new LeftUpRightAllowDown();
 		test.runTests();
 		System.out.println(test.resultsString());
 		
