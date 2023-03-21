@@ -7,11 +7,14 @@ public class LeftUpRightAllowDown extends TestCase{
 	int index = 0;
 	int repeats = 0;
 	
+	public LeftUpRightAllowDown(){
+		name = "Left, Up, Right, but Allow Down When Needed";
+	}
+
 	// Cycles through left, up, right
 	@Override
 	public int makeDecision(Mover mover) {
 		if (repeats == 2){
-			System.out.println("I went down!");
 			return 1;
 		}
 		if (index > 2) {

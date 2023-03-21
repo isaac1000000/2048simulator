@@ -7,6 +7,10 @@ public class LeftUpRight extends TestCase{
 	int index = 0;
 	int repeats = 0;
 	
+	public LeftUpRight(){
+		name = "Left, Up, Right";
+	}
+
 	// Cycles through left, up, right
 	@Override
 	public int makeDecision(Mover mover) {

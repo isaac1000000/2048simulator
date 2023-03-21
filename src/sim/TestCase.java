@@ -2,6 +2,8 @@ package sim;
 import sim.game.*;
 
 public abstract class TestCase {
+	String name;
+
 	final int ITERATIONS = 10000;
 	int testsRun;
 	int maxValSums;
@@ -13,22 +15,26 @@ public abstract class TestCase {
 	double meanMaxValue;
 	double meanMoves;
 	
-	public TestCase() {}
+	public TestCase() {
+		name = "Generic Test Case";
+	}
 	
 	// Runs all the tests, based on the number of iterations that have been selected
 	public void runTests() {
+		System.out.println(name);
 		for (int i=0; i<ITERATIONS; i++) {
 			runOneTest();
 		}
 		
 		meanMaxValue = ((double) maxValSums) / testsRun;
 		meanMoves = ((double) moveTotal) / testsRun;
+		System.out.println();
 	}
 	
 	// Used to print results of the tests
 	public String resultsString() {
-		return String.format("Tests Run: %d\nMax Value Reached: %d\nMean Moves: %.3f\nMean Max Value: %.3f\nMax Moves: %d", 
-				new Object[] {testsRun, maxVal, meanMoves, meanMaxValue, maxMoves});
+		return String.format("Max Value Reached: %d\nMean Moves: %.3f\nMean Max Value: %.3f\nMax Moves: %d", 
+				new Object[] {maxVal, meanMoves, meanMaxValue, maxMoves});
 	}
 	
 	// You guessed it! Runs a single test and marks results
@@ -52,7 +58,7 @@ public abstract class TestCase {
 			this.maxMoves = mover.getMoves();
 		}
 		do_after_test(mover);
-		System.out.println(testsRun);
+		System.out.print("\rTests Run: " + testsRun);
 	}
 	
 	// Will be overridden to include decision-making at each move for each test
