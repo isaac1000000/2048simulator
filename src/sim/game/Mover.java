@@ -8,7 +8,7 @@ public class Mover {
 	private int maxVal;
 	private boolean over;
 	private int moves;
-	BoardArchive archive;
+	public BoardArchive archive;
 	// Used for simulations in case a certain pattern "traps" itself
 	private boolean sameAsLast;
 	public int[] movesTried;

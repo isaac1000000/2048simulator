@@ -47,6 +47,6 @@ public class LeftUpRight extends TestCase{
 		LeftUpRight test = new LeftUpRight();
 		test.runTests();
 		System.out.println(test.resultsString());
-		
+		System.out.println(test.maxBoardString());
 	}
 }

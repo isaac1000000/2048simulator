@@ -36,6 +36,15 @@ public abstract class TestCase {
 		return String.format("Max Value Reached: %d\nMean Moves: %.3f\nMean Max Value: %.3f\nMax Moves: %d", 
 				new Object[] {maxVal, meanMoves, meanMaxValue, maxMoves});
 	}
+
+	// Returns a snapshot of the maximum board
+	public String maxBoardString(){
+		return maxMover.getBoard().toString();
+	}
+
+	public void printMaxBoardHistory(){
+		maxMover.archive.printArchive();
+	}
 	
 	// You guessed it! Runs a single test and marks results
 	public void runOneTest() {

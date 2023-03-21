@@ -47,6 +47,7 @@ public class LeftUpRightAllowDown extends TestCase{
 		LeftUpRightAllowDown test = new LeftUpRightAllowDown();
 		test.runTests();
 		System.out.println(test.resultsString());
-		
+		System.out.println(test.maxBoardString());	
+		test.printMaxBoardHistory();	
 	}
 }
