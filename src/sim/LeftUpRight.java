@@ -7,6 +7,7 @@ public class LeftUpRight extends TestCase{
 	int index = 0;
 	int repeats = 0;
 	
+	// Cycles through left, up, right
 	@Override
 	public int makeDecision(Mover mover) {
 		if (index > 2) {
@@ -15,6 +16,7 @@ public class LeftUpRight extends TestCase{
 		return current_move[index++];
 	}
 	
+	// Very strict game-over, where if left right or up can't be achieved it ends
 	public boolean gameNotOver(sim.game.Mover mover) {
 		if (mover.isOver()) {
 			return false;
