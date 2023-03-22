@@ -30,8 +30,8 @@ public class Mover {
 	 * Instead of that, we're going to use this system:
 	 * 0: UP
 	 * 1: DOWN
-	 * 2: RIGHT
-	 * 3: LEFT
+	 * 2: LEFT
+	 * 3: RIGHT
 	 * 
 	 */
 	public void move(int dir) {

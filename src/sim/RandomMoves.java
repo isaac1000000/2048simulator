@@ -17,7 +17,7 @@ public class RandomMoves extends TestCase{
 	}
 
 	public static void main(String[] args) {
-		LeftUpRightDown test = new LeftUpRightDown();
+		RandomMoves test = new RandomMoves();
 		test.runTests();
 		System.out.println(test.resultsString());
 		System.out.println(test.maxBoardString());
