@@ -11,7 +11,7 @@ public class LeftUpRightDown extends TestCase{
 		name = "Left, Up, Right, Down";
 	}
 
-	// Cycles through left, up, right
+	// Cycles through left, up, right, down
 	@Override
 	public int makeDecision(Mover mover) {
 		if (index > 3) {

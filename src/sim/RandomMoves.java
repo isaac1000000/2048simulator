@@ -10,12 +10,12 @@ public class RandomMoves extends TestCase{
 		name = "Random Moves";
 	}
 
-	// Cycles through left, up, right
+	// Chooses a random move
 	@Override
 	public int makeDecision(Mover mover) {
 		return rand.nextInt(4);
 	}
-	
+
 	public static void main(String[] args) {
 		LeftUpRightDown test = new LeftUpRightDown();
 		test.runTests();

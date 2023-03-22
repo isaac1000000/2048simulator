@@ -12,7 +12,7 @@ public class LeftUpRightUp extends TestCase{
 		name = "Left, Up, Right, Up and Allow Down When Needed";
 	}
 
-	// Cycles through left, up, right
+	// Cycles through left, up, right, up
 	@Override
 	public int makeDecision(Mover mover) {
 		if (repeats == 2){
