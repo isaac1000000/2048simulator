@@ -23,14 +23,6 @@ public class LeftUpRightAllowDown extends TestCase{
 		return current_move[index++];
 	}
 	
-	// Very strict game-over, where if left right or up can't be achieved it ends
-	public boolean gameNotOver(sim.game.Mover mover) {
-		if (mover.isOver()) {
-			return false;
-		}
-		return true;
-	}
-	
 	public void do_after_move(sim.game.Mover mover) {
 		if (mover.isSameAsLast()) {
 			this.repeats++;
