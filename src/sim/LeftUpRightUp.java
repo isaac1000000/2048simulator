@@ -3,7 +3,7 @@ package sim;
 import sim.game.Mover;
 
 public class LeftUpRightUp extends TestCase{
-	int[] current_move = {3, 0, 2};
+	int[] current_move = {2, 0, 3};
 	int index = 0;
 	int repeats = 0;
 	int direction = 1;
@@ -15,7 +15,7 @@ public class LeftUpRightUp extends TestCase{
 	// Cycles through left, up, right, up
 	@Override
 	public int makeDecision(Mover mover) {
-		if (repeats == 2){
+		if (repeats == 3){
 			return 1;
 		}
 		int res = current_move[index];
@@ -43,5 +43,6 @@ public class LeftUpRightUp extends TestCase{
 		test.runTests();
 		System.out.println(test.resultsString());
 		System.out.println(test.maxBoardString());	
+		test.printMaxBoardHistory();
 	}
 }

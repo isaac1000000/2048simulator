@@ -3,7 +3,7 @@ package sim;
 import sim.game.Mover;
 
 public class LeftUpRight extends TestCase{
-	int[] current_move = {3, 0, 2};
+	int[] current_move = {2, 0, 3};
 	int index = 0;
 	int repeats = 0;
 	
