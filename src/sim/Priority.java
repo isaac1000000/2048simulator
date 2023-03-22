@@ -3,7 +3,7 @@ package sim;
 import sim.game.Mover;
 
 public class Priority extends TestCase{
-	int[] move_order = {0, 3, 2, 1};
+	int[] move_order = {0, 2, 3, 1};
 	int index = 0;
 	int repeats = 0;
 	
@@ -11,7 +11,7 @@ public class Priority extends TestCase{
 		name = "Priority: Up, Left, Right, Down";
 	}
 
-	// Cycles through left, up, right
+	// Cycles through left, up, right, down based on priority
 	@Override
 	public int makeDecision(Mover mover) {
 		if (mover.isSameAsLast()) {
@@ -31,6 +31,5 @@ public class Priority extends TestCase{
 		test.runTests();
 		System.out.println(test.resultsString());
 		System.out.println(test.maxBoardString());
-		test.printMaxBoardHistory();
 	}
 }
